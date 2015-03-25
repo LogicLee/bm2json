@@ -13,15 +13,15 @@ write-host "Start convert to JSON..."
 write-host "["
 foreach($bookmark in $bookmarks)
 {       
-    $count++
+	$count++
     $name = $bookmark.innerText
     $url = $bookmark.href
     $folder = $bookmark.parentNode.previousSibling.parentNode.previousSibling.innerText
 
     write-host "  {"
-    write-host "    'name'   : '$name'",
-    write-host "    'url'    : '$url'",
-    write-host "    'folder' : '$folder'"
+    write-host "    `"name`"   : `"$name`","
+    write-host "    `"url`"    : `"$url`","
+    write-host "    `"folder`" : `"$folder`""
     write-host "  },"
     write-host ""
 }
