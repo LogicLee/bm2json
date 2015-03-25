@@ -22,7 +22,7 @@ foreach($bookmark in $bookmarks)
     write-host "    'name'   : '$name'",
     write-host "    'url'    : '$url'",
     write-host "    'folder' : '$folder'"
-    write-host "  }"
+    write-host "  },"
     write-host ""
 }
 write-host "]"
