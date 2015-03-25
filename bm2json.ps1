@@ -9,8 +9,8 @@ $bookmarks = $page.ParsedHtml.links
 
 cls
 $count = 0
-write-host "Start convert to JSON...`r`n"
-write-host "[`r`n"
+write-host "Start convert to JSON..."
+write-host "["
 foreach($bookmark in $bookmarks)
 {       
 	$count++
@@ -18,13 +18,13 @@ foreach($bookmark in $bookmarks)
     $url = $bookmark.href
     $folder = $bookmark.parentNode.previousSibling.parentNode.previousSibling.innerText
 
-    write-host "  {`r`n"
-    write-host "    'name'   : '$name'`r`n"
-    write-host "    'url'    : '$url'`r`n"
-    write-host "    'folder' : '$folder'`r`n"
-    write-host "  }`r`n"
-    write-host "`r`n"
+    write-host "  {"
+    write-host "    'name'   : '$name'",
+    write-host "    'url'    : '$url'",
+    write-host "    'folder' : '$folder'"
+    write-host "  }"
+    write-host ""
 }
-write-host "]`r`n"
+write-host "]"
 
-write-host "Finished converting" $count " bookmarks"
+write-host "Finished converting" $count "bookmarks"
